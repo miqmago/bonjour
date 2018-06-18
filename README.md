@@ -55,6 +55,10 @@ Options are:
 - `protocol` (string, optional) - `udp` or `tcp` (default)
 - `txt` (object, optional) - a key/value object to broadcast as the TXT
   record
+- `reannounceDelay` (integer, optional) - delay in ms between service announcements, defaults to 1000 ms
+- `reannounceForever` (boolean, optional) - keep anouncing the service forever (overrides reannounceMaxMs), defaults to false
+- `reannounceFactor` (integer, optional) - every time the service is announced, the next announcement delay will be multiplied by this number, defaults to 3
+- `reannounceMaxMs` (integer, optional) - max ms to keep announcing the service, defaults to 1 hour
 
 IANA maintains a [list of official service types and port
 numbers](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml).
